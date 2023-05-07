@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <div class="logo">
+            <a href="index.html">Tourism</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a id="home" class="tab active" href="index.html" onclick="addClass(this)">home</a></li>
+                <li><a id="about" class="tab" href="#video-tour" onclick="addClass(this)">about us</a></li>
+                <li><a id="service" class="tab" href="#services" onclick="addClass(this)">our services</a></li>
+                <li><a id="tours" class="tab" href="#packages" onclick="addClass(this)">tour package</a></li>
+                <li><a id="api" class="tab" href="static/pages/api.html" onclick="addClass(this)">api</a></li>
+                <div class="burger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <section class="burger-menu">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#video-tour">about us</a></li>
+                <li><a href="#services">our services</a></li>
+                <li><a href="#packages">tour package</a></li>
+                <li><a href="static/pages/api.html">api</a></li>
+        </section>
+            <section class="slideshow">
+                <div class="slides fade">
+                    <img class="first-slide" src="static/img/slider/slider1.png" alt="Female near the sea">
+                </div>
+                <div class="slides fade">
+                    <img class="second-slide" src="static/img/slider/slider2.png" alt="Female in a boat swimming in a lake">
+                </div>
+                <div class="slides fade">
+                    <img class="third-slide" src="static/img/slider/slider3.png" alt="Female sitting and looking at lake and forest in the background">
+                </div>
+                <div class="slides fade">
+                    <img class="last-slide" src="static/img/slider/slider4.png" alt="Female sitting and looking at lake and mountains in the background">
+                </div>
+                <span class="slider-span">travel with unique experience</span>
+                <img class="slider-gradient" src="static/img/slider/slider gradient.png" alt="Light blue color on top of image">
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                <div class="white-brush">
+                    <span>From $199/Person</span>
+                </div>
+                <h1>discover greece</h1>
+            </section>
+            <section class="hot-services" id="services">
+                <div class="container">
+                    <div class="services-info">
+                        <span class="small-title">discover</span>
+                        <h2>our hot services</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                    </div>
+                    <div class="service-card-wrapper">
+                        <div class="service-card" onclick="openModal(this)">
+                            <img class="picture" id="first-card-img" >
+                            <div>
+                            <h4 class="cardTitle" id="first-card-title"></h4>
+                            <p class="description" id="first-card-p"></p>
+                         </div>
+                        </div>
+                        <div class="service-card" onclick="openModal(this)">
+                            <img class="picture" id="second-card-img" >
+                            <div>
+                            <h4 class="cardTitle" id="second-card-title"></h4>
+                            <p class="description" id="second-card-p"></p>
+                            </div>
+                        </div>
+                        <div class="service-card" onclick="openModal(this)">
+                            <img class="picture" id="third-card-img" >
+                            <div>
+                            <h4 class="cardTitle" id="third-card-title"></h4>
+                            <p class="description" id="third-card-p"></p>
+                            </div>
+                        </div>
+                        <div class="service-card" onclick="openModal(this)">
+                            <img class="picture" id="fourth-card-img" >
+                            <div>
+                            <h4 class="cardTitle" id="fourth-card-title"></h4>
+                            <p class="description" id="fourth-card-p"></p>
+                            </div>
+                        </div>
+                        <div class="service-card" onclick="openModal(this)">
+                            <img class="picture" id="fifth-card-img" >
+                            <div>
+                            <h4 class="cardTitle" id="fifth-card-title"></h4>
+                            <p class="description" id="fifth-card-p"></p>
+                            </div>
+                        </div>
+                        <div class="service-card" onclick="openModal(this)">
+                            <img class="picture" id="last-card-img" >
+                            <div>
+                            <h4 class="cardTitle" id="last-card-title"></h4>
+                            <p class="description" id="last-card-p"></p>
+                            </div>
+                        </div>
+                        <div class="modal" id="myModal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <img id="modal-img">
+                                <h4 id="modal-title"></h4>
+                                <p id="modal-info"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video" id="video-tour">
+                <img src="static/img/video/black cover.png" alt="black cover for background image">
+                <span class="small-title">discover</span>
+                <h2>watch our video tour</h2>
+                <video poster="static/img/video/video cover.png" controls="controls" preload="metadata">
+                    <source src="static/video/rafting.mp4" type="video/mp4">
+                </video>
+            </section>
+            <section class="statistics">
+                <div class="container">
+                    <div class="statistic">
+                        <img src="static/img/statistics/happy travelers.png" alt="star wearing sunglasses clipart">
+                        <span class="count" data-target="120859">0</span>
+                        <span>happy travelers</span>
+                    </div>
+                    <div class="statistic">
+                        <img src="static/img/statistics/satisfied tours.png" alt="eiffel tower, pyramids and big ben clipart">
+                        <span class="count" data-target="2594">0</span>
+                        <span>satisfied tours</span>
+                    </div>
+                    <div class="statistic">
+                        <img src="static/img/statistics/destination.png" alt="globe clipart">
+                        <span class="count" data-target="854">0</span>
+                        <span class="text">destination</span>
+                    </div>
+                    <div class="statistic">
+                        <img src="static/img/statistics/hotels and resorts.png" alt="hotel building clipart">
+                        <span class="count" data-target="978">0</span>
+                        <span class="text">hotels & resorts</span>
+                    </div>
+                </div>
+            </section>
+            <section class="offers" id="packages">
+                <div class="container">
+                    <span class="small-title">we offer</span>
+                    <h2>popular tour package</h2>
+                    <div class="offer-cards-wrapper">
+                        <div class="offer-card">
+                            <span class="label">honeymoon</span>
+                            <img src="static/img/offers/greece.png" alt="Greece  city view">
+                            <div>
+                            <span>$299/person</span>
+                            <h5>Blue Beauty of Greece</h5>
+                            <span>5 Days / 6 Nights</span>
+                            </div>
+                        </div>
+                        <div class="offer-card">
+                            <span class="label">holiday</span>
+                            <img src="static/img/offers/phuket.png" alt="Phuket view">
+                            <div>
+                            <span>$178/person</span>
+                            <h5>Nature of Phuket</h5>
+                            <span>3 Days / 4 Nights</span>
+                            </div>
+                        </div>
+                        <div class="offer-card">
+                            <span class="label">holiday</span>
+                            <img src="static/img/offers/paris.png" alt="Paris view">
+                            <div>
+                            <span>$1111/person</span>
+                            <h5>World Tour of Paris</h5>
+                            <span>7 Days / 8 Nights</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="discount">
+                <img src="static/img/discount/Rectangle 9 copy 4.png" alt="light green cover for background">
+                <div class="discount-info">
+                <span class="discount-offer">Get 10% Off on Your Next Travel</span>
+                <span class="dicount-limit">Maximum doscout 1000$ per person</span>
+                <form>
+                    <input type="text" placeholder="Enter your email">
+                    <button>subscribe</button>
+                </form>
+                </div>
+            </section>
+            <section class="reviews">
+                <div class="container">
+                    <span class="small-title">our smiles</span>
+                    <h2>happy travelers</h2>
+                    <div class="review-card-wrapper">
+                        <div class="review-card">
+                            <img src="static/img/reviews/Ribeca Singh.png" alt="female profile picture">
+                            <span>ribeca singh</span>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        </div>
+                        <div class="review-card">
+                            <img src="static/img/reviews/Jimmy dean.png" alt="female profile picture">
+                            <span>jimmy dean</span>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        </div>
+                        <div class="review-card">
+                            <img src="static/img/reviews/Theodule Terer.png" alt="female profile picture">
+                            <span>theodule teter</span>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="book-trip">
+                <div>
+                <h2>ready to plan your trip?</h2>
+                <button>book now</button>
+                </div>
+            </section>
+            <section class="destinations">
+                <div class="container">
+                <span class="small-title">destination</span>
+                <h2>popular tourism countries</h2>
+                <div class="destination-card-wrapper">
+                    <div class="destination-card">
+                        <img src="static/img/destinations/Thailand.png" alt="Thailand sightseeing">
+                        <img class="cover-img" src="static/img/destinations/white cover.png" alt="white cover for background">
+                        <div class="destination-info">
+                            <div>
+                        <h3>Thailand</h3>
+                        <span>$900 - $1900</span>
+                        </div>
+                        <a href="#">
+                            <img class="see-more" src="static/img/destinations/see more arrow.png" alt="arrow pointing right to see more information">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="static/img/destinations/Italy.png" alt="Thailand sightseeing">
+                        <img class="cover-img" src="static/img/destinations/white cover.png" alt="white cover for background">
+                        <div class="destination-info">
+                            <div>
+                        <h3>Italy</h3>
+                        <span>$700 - $2000</span>
+                    </div>
+                        <a href="#">
+                            <img class="see-more" src="static/img/destinations/see more arrow.png" alt="arrow pointing right to see more information">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="static/img/destinations/Indonesia.png" alt="Thailand sightseeing">
+                        <img class="cover-img" src="static/img/destinations/white cover.png" alt="white cover for background">
+                        <div class="destination-info">
+                            <div>
+                        <h3>Indonesia</h3>
+                        <span>$300 - $1100</span>
+                    </div>
+                        <a href="#">
+                            <img class="see-more" src="static/img/destinations/see more arrow.png" alt="arrow pointing right to see more information">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="static/img/destinations/Thailand.png" alt="Thailand sightseeing">
+                        <img class="cover-img" src="static/img/destinations/white cover.png" alt="white cover for background">
+                        <div class="destination-info">
+                            <div>
+                        <h3>Singapore</h3>
+                        <span>$1900 - $2700</span>
+                    </div>
+                        <a href="#">
+                            <img class="see-more" src="static/img/destinations/see more arrow.png" alt="arrow pointing right to see more information">
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="address-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.1240084355713!2d-87.92553392416188!3d44.53309337107393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8802e8a7beb4ba69%3A0x9c168947be0678a2!2sThe%20Weidner!5e0!3m2!1ska!2sge!4v1683414057708!5m2!1ska!2sge" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <nav>
+                <div class="footer-links">
+                <div>
+                 <span>Quick Links</span>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                     <li><a href="#">About Company</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Infrastructure</a></li>                
+                  </ul>
+              </div>
+              <div>
+                <span>Support</span>
+                 <ul>
+                   <li><a href="#">Get Started</a></li>
+                    <li><a href="#">Lorem</a></li>
+                   <li><a href="#">Help</a></li>
+                   <li><a href="#">Ipsum</a></li>                
+                 </ul>
+             </div>
+             <div>
+                <span>Address</span>
+                 <ul>
+                   <li><address>14, 1 Ellis bridge ST.</address></li>
+                    <li><address>auckland 3500, Australia</address></li>
+                   <li><address>+1234567890</address></li>
+                   <li><address>contactus@demo.com</address></li>                
+                 </ul>
+             </div>
+            </div>
+             <form>
+                <label for="email">Subscribe to our newsletter</label>
+                <input type="text" name="email" id="email" placeholder="Your email">
+             </form>
+            </nav>
+        </div>
+        <div class="all-rights-reserved">
+            <span>trourism©All Rights Reserved</span>
+        </div>
+    </footer>
+    <script src="static/js/slider.js"></script>
+    <script src="static/js/card-generator.js"></script>
+    <script src="static/js/counter.js"></script>
+    <script src="static/js/active-tab.js"></script>
+    <script src="static/js/burger.js"></script>
+    <script src="static/js/modal.js"></script>
+</body>
+</html>

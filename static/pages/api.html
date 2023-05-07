@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API page</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <div class="logo">
+            <a href="../../index.html">Tourism</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a id="home" class="tab" href="../../index.html" onclick="addClass(this)">home</a></li>
+                <li><a id="about" class="tab" href="../../index.html#video-tour" onclick="addClass(this)">about us</a></li>
+                <li><a id="service" class="tab" href="../../index.html#services" onclick="addClass(this)">our services</a></li>
+                <li><a id="tours" class="tab" href="../../index.html#packages" onclick="addClass(this)">tour package</a></li>
+                <li><a id="api" class="tab active" href="api.html" onclick="addClass(this)">api</a></li>
+                <div class="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+            </div>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <section class="burger-menu">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#video-tour">about us</a></li>
+                <li><a href="#services">our services</a></li>
+                <li><a href="#packages">tour package</a></li>
+                <li><a href="static/pages/api.html">api</a></li>
+        </section>
+        <div class="api-container">
+        <h1>Users</h1>
+        <div>
+        <ul class="names"></ul>
+        <ul class="emails"></ul>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <nav>
+                <div class="footer-links">
+                <div>
+                 <span>Quick Links</span>
+                  <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                     <li><a href="#">About Company</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Infrastructure</a></li>                
+                  </ul>
+              </div>
+              <div>
+                <span>Support</span>
+                 <ul>
+                   <li><a href="#">Get Started</a></li>
+                    <li><a href="#">Lorem</a></li>
+                   <li><a href="#">Help</a></li>
+                   <li><a href="#">Ipsum</a></li>                
+                 </ul>
+             </div>
+             <div>
+                <span>Address</span>
+                 <ul>
+                   <li><address>14, 1 Ellis bridge ST.</address></li>
+                    <li><address>auckland 3500, Australia</address></li>
+                   <li><address>+1234567890</address></li>
+                   <li><address>contactus@demo.com</address></li>                
+                 </ul>
+             </div>
+            </div>
+             <form>
+                <label for="email">Subscribe to our newsletter</label>
+                <input type="text" name="email" id="email" placeholder="Your email">
+             </form>
+            </nav>
+        </div>
+        <div class="all-rights-reserved">
+            <span>trourism©All Rights Reserved</span>
+        </div>
+    </footer>
+    
+    <script src="../js/active-tab.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/burger.js"></script>
+</body>
+</html>
